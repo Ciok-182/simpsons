@@ -24,9 +24,36 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PfR-vo-6cn">
                                 <rect key="frame" x="0.0" y="118" width="414" height="744"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="RiR-ta-grm">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ios-uC-EF5">
+                                            <rect key="frame" x="20" y="13" width="20" height="18"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="20" id="5Oq-NQ-sZ6"/>
+                                                <constraint firstAttribute="height" constant="20" id="z1Z-t0-8QK"/>
+                                            </constraints>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hlx-r4-kOc">
+                                            <rect key="frame" x="0.0" y="43" width="414" height="1"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="hMi-Ud-QB9"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Ios-uC-EF5" firstAttribute="centerY" secondItem="RiR-ta-grm" secondAttribute="centerY" id="2Ki-n8-hSY"/>
+                                        <constraint firstAttribute="trailing" secondItem="hlx-r4-kOc" secondAttribute="trailing" id="8Az-66-prv"/>
+                                        <constraint firstItem="Ios-uC-EF5" firstAttribute="leading" secondItem="RiR-ta-grm" secondAttribute="leading" constant="20" id="c7g-vQ-0Xi"/>
+                                        <constraint firstItem="hlx-r4-kOc" firstAttribute="leading" secondItem="RiR-ta-grm" secondAttribute="leading" id="qj2-IT-NYw"/>
+                                        <constraint firstAttribute="bottom" secondItem="hlx-r4-kOc" secondAttribute="bottom" id="rnm-JQ-wsk"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="characterCellID" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="characterCellID" rowHeight="60" id="lgm-Zh-OqJ" customClass="CharacterTableViewCell" customModule="simpsonsviewer" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="72" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lgm-Zh-OqJ" id="kFz-oI-svh">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
@@ -64,13 +91,15 @@
                     </view>
                     <connections>
                         <outlet property="labelTitle" destination="ufc-g0-ukf" id="dWe-fK-kTe"/>
+                        <outlet property="searchImage" destination="Ios-uC-EF5" id="R0U-s8-KKA"/>
                         <outlet property="tableCharacters" destination="PfR-vo-6cn" id="VWQ-uD-aVh"/>
+                        <outlet property="viewTableHeader" destination="RiR-ta-grm" id="Z8L-jt-ALj"/>
                         <segue destination="TFQ-Sk-ael" kind="show" identifier="goToDetail" id="7nS-oG-bzY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-281" y="62"/>
+            <point key="canvasLocation" x="-281.15942028985512" y="61.607142857142854"/>
         </scene>
         <!--Character Detail View Controller-->
         <scene sceneID="alf-EC-FkH">
@@ -130,4 +159,7 @@
             <point key="canvasLocation" x="581" y="62"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
+    </resources>
 </document>
