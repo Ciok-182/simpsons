@@ -59,7 +59,6 @@ class CharactersListViewController: UIViewController {
     
     fileprivate func showTextFilter() {
         self.txtFilter = UITextField(frame: CGRect(x: 60, y: 5, width: self.view.frame.width - 60, height: 40))
-        print("self.txtFilter.frame.width: \(self.txtFilter!.frame.width)")
         txtFilter!.returnKeyType = .search
         txtFilter!.delegate = self
         txtFilter!.placeholder = "Search character"
@@ -81,7 +80,7 @@ class CharactersListViewController: UIViewController {
 
 }
 
-//  MARK: Delegates CodiInteractor
+//  MARK: ConnectorDelegate
 extension CharactersListViewController: ConnectorDelegate
 {
     func doneGetCharacters(success: Bool, arrayCharacters: [Character], title: String?) {
@@ -250,4 +249,3 @@ extension CharactersListViewController: UITextFieldDelegate {
     }
     
 }
-
