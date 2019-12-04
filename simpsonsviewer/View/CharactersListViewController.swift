@@ -17,6 +17,8 @@ class CharactersListViewController: UIViewController {
     @IBOutlet var txtFilter: UITextField?
     @IBOutlet weak var tableCharacters: UITableView!
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
     private var isSearch = false
     private var hasMovements = false
     
@@ -32,6 +34,7 @@ class CharactersListViewController: UIViewController {
         getCharacters()
         showTextFilter()
         searchIsEnabled(enabled: hasMovements)
+        spinner.hidesWhenStopped = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,6 +47,7 @@ class CharactersListViewController: UIViewController {
         let conector = Connector()
         conector.delegate = self
         conector.getSimpsonsCharacters()
+        spinner.startAnimating()
     }
     
     fileprivate func searchIsEnabled(enabled:Bool) {
@@ -81,6 +85,8 @@ class CharactersListViewController: UIViewController {
 extension CharactersListViewController: ConnectorDelegate
 {
     func doneGetCharacters(success: Bool, arrayCharacters: [Character], title: String?) {
+        spinner.stopAnimating()
+        
         if success{
             self.allCharacters = arrayCharacters
             self.isSearch = false
