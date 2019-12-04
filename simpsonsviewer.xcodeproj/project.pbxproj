@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		3EF506AA2396DEE700B75E9F /* CharactersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF506A92396DEE700B75E9F /* CharactersListViewController.swift */; };
 		3EF506AD2396F4D200B75E9F /* Connector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF506AC2396F4D200B75E9F /* Connector.swift */; };
-		3EF506B02396F56700B75E9F /* SimpsonsCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF506AF2396F56700B75E9F /* SimpsonsCharacter.swift */; };
+		3EF506B02396F56700B75E9F /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF506AF2396F56700B75E9F /* Character.swift */; };
 		3EF506B42396FA1C00B75E9F /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF506B32396FA1C00B75E9F /* Parser.swift */; };
+		3EF506B7239727CA00B75E9F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF506B6239727CA00B75E9F /* Extensions.swift */; };
 		3EF7AD9F2396D9A400A0664B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF7AD9E2396D9A400A0664B /* AppDelegate.swift */; };
 		3EF7ADA12396D9A400A0664B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF7ADA02396D9A400A0664B /* SceneDelegate.swift */; };
 		3EF7ADA62396D9A400A0664B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EF7ADA42396D9A400A0664B /* Main.storyboard */; };
@@ -21,8 +22,9 @@
 /* Begin PBXFileReference section */
 		3EF506A92396DEE700B75E9F /* CharactersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListViewController.swift; sourceTree = "<group>"; };
 		3EF506AC2396F4D200B75E9F /* Connector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connector.swift; sourceTree = "<group>"; };
-		3EF506AF2396F56700B75E9F /* SimpsonsCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsCharacter.swift; sourceTree = "<group>"; };
+		3EF506AF2396F56700B75E9F /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		3EF506B32396FA1C00B75E9F /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		3EF506B6239727CA00B75E9F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3EF7AD9B2396D9A400A0664B /* simpsonsviewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpsonsviewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EF7AD9E2396D9A400A0664B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EF7ADA02396D9A400A0664B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,7 +57,7 @@
 		3EF506AE2396F55700B75E9F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3EF506AF2396F56700B75E9F /* SimpsonsCharacter.swift */,
+				3EF506AF2396F56700B75E9F /* Character.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -78,6 +80,14 @@
 				3EF7ADA02396D9A400A0664B /* SceneDelegate.swift */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		3EF506B52397279500B75E9F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3EF506B6239727CA00B75E9F /* Extensions.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		3EF7AD922396D9A400A0664B = {
@@ -103,6 +113,7 @@
 				3EF506B12396F9A200B75E9F /* View */,
 				3EF506AE2396F55700B75E9F /* Models */,
 				3EF506AB2396F47400B75E9F /* Net */,
+				3EF506B52397279500B75E9F /* Utilities */,
 				3EF7ADAC2396D9A600A0664B /* Info.plist */,
 			);
 			path = simpsonsviewer;
@@ -182,9 +193,10 @@
 				3EF506AA2396DEE700B75E9F /* CharactersListViewController.swift in Sources */,
 				3EF506AD2396F4D200B75E9F /* Connector.swift in Sources */,
 				3EF506B42396FA1C00B75E9F /* Parser.swift in Sources */,
-				3EF506B02396F56700B75E9F /* SimpsonsCharacter.swift in Sources */,
+				3EF506B02396F56700B75E9F /* Character.swift in Sources */,
 				3EF7AD9F2396D9A400A0664B /* AppDelegate.swift in Sources */,
 				3EF7ADA12396D9A400A0664B /* SceneDelegate.swift in Sources */,
+				3EF506B7239727CA00B75E9F /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

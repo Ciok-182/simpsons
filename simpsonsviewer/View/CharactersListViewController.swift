@@ -11,6 +11,9 @@ import UIKit
 class CharactersListViewController: UIViewController {
     
     @IBOutlet weak var tableCharacters: UITableView!
+    @IBOutlet weak var labelTitle: UILabel!
+    
+    
     
     private let dataSource = "http://api.duckduckgo.com/?q=simpsons+characters&format=json"
 
@@ -42,10 +45,13 @@ class CharactersListViewController: UIViewController {
 //  MARK: Delegates CodiInteractor
 extension CharactersListViewController: ConnectorDelegate
 {
-    func doneGetCharacters(success: Bool, arrayCharacters: [SimpsonsCharacter]) {
+    
+    func doneGetCharacters(success: Bool, arrayCharacters: [Character], title: String?) {
         if success{
             print("\n\n Success \(arrayCharacters.count) characters")
-            
+            if let heading = title {
+                labelTitle.text = heading
+            }
         } else{
             print("Error")
         }

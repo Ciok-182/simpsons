@@ -10,7 +10,7 @@ import UIKit
 
 
 protocol ConnectorDelegate {
-    func doneGetCharacters(success: Bool, arrayCharacters: [SimpsonsCharacter])
+    func doneGetCharacters(success: Bool, arrayCharacters: [Character], title: String?)
 }
 
 class Connector: NSObject {
@@ -30,26 +30,28 @@ class Connector: NSObject {
              
             if let error = error {
                 // Handle Error
-                self.delegate?.doneGetCharacters(success: false, arrayCharacters: [SimpsonsCharacter()])
+                self.delegate?.doneGetCharacters(success: false, arrayCharacters: [Character()], title: nil)
                 print("Error: \(error.localizedDescription)")
                 return
             }
             guard response != nil else {
                 // Handle Empty Response
-                self.delegate?.doneGetCharacters(success: false, arrayCharacters: [SimpsonsCharacter()])
+                self.delegate?.doneGetCharacters(success: false, arrayCharacters: [Character()], title: nil)
                 print("Empty Response ")
                 return
             }
             guard let data = data else {
                 // Handle Empty Data
-                self.delegate?.doneGetCharacters(success: false, arrayCharacters: [SimpsonsCharacter()])
+                self.delegate?.doneGetCharacters(success: false, arrayCharacters: [Character()], title: nil)
                 print("Empty Data")
                 return
             }
             
             let parser: Parser = Parser()
             parser.delegate = self
-            parser.makeParseSimpsonsCharactersWith(data: data)
+            DispatchQueue.main.async(execute: {
+                parser.makeParseCharactersWith(data: data)
+            })
             
         })
         
@@ -60,8 +62,8 @@ class Connector: NSObject {
 }
 
 extension Connector : ParserDelegate{
-    func doneParseGetCharacters(array: [SimpsonsCharacter]) {
+    func doneParseGetCharacters(array: [Character], title: String?) {
         //print("doneParseGetCharacters \n")
-        self.delegate?.doneGetCharacters(success: true, arrayCharacters: array)
+        self.delegate?.doneGetCharacters(success: true, arrayCharacters: array, title: title)
     }
 }

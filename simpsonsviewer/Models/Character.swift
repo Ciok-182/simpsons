@@ -8,6 +8,12 @@
 
 import UIKit
 
-class SimpsonsCharacter: NSObject {
+class Character: NSObject {
+     
+    var textTopic = ""
+    var firstURL = ""
+    var resultTopic = ""
+    var imageUrl = ""
+    var characterName = ""
 
 }
