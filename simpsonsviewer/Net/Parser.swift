@@ -35,23 +35,18 @@ class Parser: NSObject {
                         
                         if let endOfSentence = text.firstIndex(of: "-") {
                             
-                            let name = text[...endOfSentence]
-                            character.characterName = String(name).replacingOccurrences(of: " -", with: "")
+                            let endName = text.index(endOfSentence, offsetBy: -2)
+                            let name = text[...endName]
+                            character.characterName = String(name)
                             print("Name:\(character.characterName)")
                             
-                            /*print("name: \(name)")
-                            let newTex = String(name)
-                            let newEnd = newTex.index(before: endOfSentence)
-                            let characterName = newTex[...newEnd]
-                            print("nameX: \(characterName)")
-                            */
+                            let startText = text.index(endOfSentence, offsetBy: 2)
+                            let infoText = text[startText...]
+                            character.textTopic = String(infoText)
+                            print("Text:\(character.textTopic)")
                             
                         }
                         
-
-                        
-                        print("Text: \(text) \n")
-                        character.textTopic = text
                     }
                     
                     if let result = object["Result"] as? String {

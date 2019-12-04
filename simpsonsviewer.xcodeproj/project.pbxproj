@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3ECEC47C239822C20099DCCF /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECEC47B239822C20099DCCF /* CharacterTableViewCell.swift */; };
+		3ECEC47E23982FE00099DCCF /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECEC47D23982FE00099DCCF /* CharacterDetailViewController.swift */; };
 		3EF506AA2396DEE700B75E9F /* CharactersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF506A92396DEE700B75E9F /* CharactersListViewController.swift */; };
 		3EF506AD2396F4D200B75E9F /* Connector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF506AC2396F4D200B75E9F /* Connector.swift */; };
 		3EF506B02396F56700B75E9F /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF506AF2396F56700B75E9F /* Character.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3ECEC47B239822C20099DCCF /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
+		3ECEC47D23982FE00099DCCF /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
 		3EF506A92396DEE700B75E9F /* CharactersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListViewController.swift; sourceTree = "<group>"; };
 		3EF506AC2396F4D200B75E9F /* Connector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connector.swift; sourceTree = "<group>"; };
 		3EF506AF2396F56700B75E9F /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 			children = (
 				3EF7ADA42396D9A400A0664B /* Main.storyboard */,
 				3EF506A92396DEE700B75E9F /* CharactersListViewController.swift */,
+				3ECEC47B239822C20099DCCF /* CharacterTableViewCell.swift */,
+				3ECEC47D23982FE00099DCCF /* CharacterDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -197,6 +203,8 @@
 				3EF7AD9F2396D9A400A0664B /* AppDelegate.swift in Sources */,
 				3EF7ADA12396D9A400A0664B /* SceneDelegate.swift in Sources */,
 				3EF506B7239727CA00B75E9F /* Extensions.swift in Sources */,
+				3ECEC47E23982FE00099DCCF /* CharacterDetailViewController.swift in Sources */,
+				3ECEC47C239822C20099DCCF /* CharacterTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
